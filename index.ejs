@@ -19,6 +19,12 @@
   <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
   <% } %>
 
+  <!--[if lt IE 9]>
+  <% for (var js in htmlWebpackPlugin.options.ie8) { %>
+  <script src="<%= htmlWebpackPlugin.options.ie8[js] %>"></script>
+  <% } %>
+  <![endif]-->
+
   <% if (htmlWebpackPlugin.options.baseHref) { %>
   <base href="<%= htmlWebpackPlugin.options.baseHref %>" />
   <% } %>
