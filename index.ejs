@@ -19,16 +19,20 @@
   <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
   <% } %>
 
+  <% if (htmlWebpackPlugin.options.ie9) { %>
   <!--[if lte IE 9]>
   <% for (var js of htmlWebpackPlugin.options.ie9) { %>
   <script src="<%= js %>"></script>
   <% } %>
   <![endif]-->
+  <% } %>
+  <% if (htmlWebpackPlugin.options.ie8) { %>
   <!--[if lte IE 8]>
   <% for (var js of htmlWebpackPlugin.options.ie8) { %>
   <script src="<%= js %>"></script>
   <% } %>
   <![endif]-->
+  <% } %>
 
   <% if (htmlWebpackPlugin.options.baseHref) { %>
   <base href="<%= htmlWebpackPlugin.options.baseHref %>" />
