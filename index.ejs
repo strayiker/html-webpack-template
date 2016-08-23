@@ -20,7 +20,7 @@
   <% } %>
 
   <!--[if lt IE 9]>
-  <% for (var js in htmlWebpackPlugin.options.ie8) { %>
+  <% for (var js of htmlWebpackPlugin.options.ie8) { %>
   <script src="<%= js %>"></script>
   <% } %>
   <![endif]-->
